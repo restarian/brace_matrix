@@ -1,6 +1,7 @@
 ## Synopsis
 
-[![Build status](https://ci.appveyor.com/api/projects/status/alvl9mr3q9bwkcw6?svg=true)](https://ci.appveyor.com/project/restarian/brace-matrix) [![Downloads](https://img.shields.io/npm/dm/brace_matrix.svg?svg=true)](https://npmjs.org/package/brace_matrix)
+
+[![Build status](https://ci.appveyor.com/api/projects/status/t789246um2rnk93l?svg=true)](https://ci.appveyor.com/project/restarian/brace-matrix) [![Downloads](https://img.shields.io/npm/dm/brace_matrix.svg?svg=true)](https://npmjs.org/package/brace_matrix)
 
 | **The [Brace Suite]** | **[Windows 10]**          |
 |:---------------------:|:-------------------------:|
