@@ -1,35 +1,35 @@
+# Brace Matrix
+### Package Specifications
 
----
-### Brace matrix pages
+----
+
+### Brace Matrix help pages
 * [Synopsis](https://github.com/restarian/brace_matrix/blob/master/docs/synopsis.md)
 * Specification
   * [License information](https://github.com/restarian/brace_matrix/blob/master/docs/specification/license_information.md)
   * **Package information**
-  * [Package information](https://github.com/restarian/brace_matrix/blob/master/docs/specification/package_information.md)
   * [Unit test output](https://github.com/restarian/brace_matrix/blob/master/docs/specification/unit_test_output.md)
-  * [Unit test output](https://github.com/restarian/brace_matrix/blob/master/docs/specification/unit_test_output.md)
+----
 
---- 
- 
-**Version**: 1.0.0
+**Version**: 1.0.2
 
-**Description**: A port of the GlMatix library with reduced functionality for efficiency.
+**Description**: A port of the GlMatix library with reduced functionality and an easy to use design
 
 **Author**: [Robert Steckroth](mailto:RobertSteckroth@gmail.com)
 
-**Dependencies**: [amdefine](https://npmjs.org/package/amdefine) [brace_maybe](https://npmjs.org/package/brace_maybe) [bracket_print](https://npmjs.org/package/bracket_print) [commander](https://npmjs.org/package/commander)
+**Dependencies**: [amdefine](https://npmjs.org/package/amdefine)
 
-**Development dependencies**: [brace_document_navlink](https://npmjs.org/package/brace_document_navlink) [bracket_utils](https://npmjs.org/package/bracket_utils) [chai](https://npmjs.org/package/chai) [gl-matrix](https://npmjs.org/package/gl-matrix) [mocha](https://npmjs.org/package/mocha) [requirejs](https://npmjs.org/package/requirejs)
+**Development dependencies**: [chai](https://npmjs.org/package/chai) [gl-matrix](https://npmjs.org/package/gl-matrix) [mocha](https://npmjs.org/package/mocha) [requirejs](https://npmjs.org/package/requirejs)
 
-**Optional Dependencies**: [@restarian/batten_document_mocha](https://npmjs.org/package/@restarian/batten_document_mocha) [@restarian/batten_document_specification](https://npmjs.org/package/@restarian/batten_document_specification)
+**Optional Dependencies**: [brace_document_navlink](https://npmjs.org/package/brace_document_navlink) [brace_document_specification](https://npmjs.org/package/brace_document_specification) [brace_document_link](https://npmjs.org/package/brace_document_link)
 
 **Package scripts**:
 
 | Name | Action |
 | ---- | ------ |
+ | make_docs | ```brace_document --navlink --link --link-dest ../Readme.md --link-path ../docs/synopsis.md -r -i docs --force-title --title "Brace Matrix help pages" --sort depth``` |
+ | make_docs_extra | ```npm run make_docs --silent -- --specification --mocha``` |
  | test | ```mocha``` |
- | make_docs | ```brace_document --navlink -r -i docs --force-title --title "Brace matrix pages" --sort depth``` |
- | make_docs_extra | ```npm run make_docs --silent -- --batten-document-specification --batten-document-mocha``` |
 
 **Keywords**: *matrix*, *math*, *vector*, *calculus*
 

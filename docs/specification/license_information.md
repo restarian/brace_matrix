@@ -1,13 +1,11 @@
 ## License information
 
 ---
-### Brace matrix pages
+### Brace Matrix help pages
 * [Synopsis](https://github.com/restarian/brace_matrix/blob/master/docs/synopsis.md)
 * Specification
   * **License information**
   * [Package information](https://github.com/restarian/brace_matrix/blob/master/docs/specification/package_information.md)
-  * [Package information](https://github.com/restarian/brace_matrix/blob/master/docs/specification/package_information.md)
-  * [Unit test output](https://github.com/restarian/brace_matrix/blob/master/docs/specification/unit_test_output.md)
   * [Unit test output](https://github.com/restarian/brace_matrix/blob/master/docs/specification/unit_test_output.md)
 
 ---
