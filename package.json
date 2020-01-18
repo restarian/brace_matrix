@@ -1,0 +1,70 @@
+{
+  "main": "lib/brace_matrix.js",
+  "name": "brace_matrix",
+  "author": {
+    "name": "Robert Steckroth",
+    "email": "RobertSteckroth@gmail.com"
+  },
+  "bugs": {
+    "url": "https://github.com/restarian/brace_matrix/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "amdefine": "^1.0.1"
+  },
+  "description": "A port of the GlMatix library with reduced functionality and an easy to use design",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^5.0.0"
+  },
+  "homepage": "https://github.com/restarian/brace_matrix#readme",
+  "keywords": [
+    "matrix",
+    "math",
+    "vector",
+    "calculus"
+  ],
+  "license": "MIT",
+  "optionalDependencies": {
+    "brace_document_navlink": "^1.1.0",
+    "brace_document_specification": "^1.1.0",
+    "brace_document_link": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/restarian/brace_matrix.git"
+  },
+  "scripts": {
+    "make_docs": "brace_document --navlink --link --link-dest ../Readme.md --link-path ../docs/synopsis.md -r -i docs --force-title --title \"Brace Matrix help pages\" --sort depth",
+    "make_docs_extra": "npm run make_docs --silent -- --specification --mocha",
+    "test": "mocha"
+  },
+  "technologies": [
+    {
+      "name": "VIM",
+      "description": "As an IDE",
+      "url": "https://www.vim.org"
+    },
+    {
+      "name": "Windows 10",
+      "description": "For unit testing and as the base operating system",
+      "url": "https://www.microsoft.com/en-us/software-download/windows10"
+    },
+    {
+      "name": "Git",
+      "description": "For repository management",
+      "url": "https://git-scm.com"
+    },
+    {
+      "name": "Github",
+      "description": "For repository storage",
+      "url": "https://github.com"
+    },
+    {
+      "name": "NPM",
+      "description": "For module storage",
+      "url": "https://npmjs.org"
+    }
+  ],
+  "version": "1.0.2"
+}
