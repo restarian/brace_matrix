@@ -2,7 +2,7 @@
   "name": "brace_matrix",
   "main": "build/brace_matrix.js",
   "description": "A port of the GlMatix library with reduced functionality and an easy to use design",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "dependencies": {
     "amdefine": "^1.0.1"
   },
