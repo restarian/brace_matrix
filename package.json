@@ -2,7 +2,7 @@
   "name": "brace_matrix",
   "main": "build/brace_matrix_umd.js",
   "description": "A port of the GlMatix library with reduced functionality and an easy to use design",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "license": "MIT",
   "dependencies": {},
   "devDependencies": {
