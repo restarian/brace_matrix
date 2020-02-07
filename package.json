@@ -1,33 +1,33 @@
 {
   "name": "brace_matrix",
-  "main": "build/brace_matrix.js",
+  "main": "build/brace_matrix_umd.js",
   "description": "A port of the GlMatix library with reduced functionality and an easy to use design",
   "version": "1.0.3",
-  "dependencies": {
-    "amdefine": "^1.0.1"
-  },
+  "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
-    "brace_maybe": "^0.1.4",
-    "brace_umd": "^0.8.10",
+    "brace_maybe": "^0.1.5",
+    "brace_umd": "^0.10.3",
+    "bracket_utils": "^0.3.7",
     "chai": "^4.2.0",
     "gl-matrix": "^3.1.0",
-    "mocha": "^7.0.0",
+    "mocha": "^7.0.1",
     "requirejs": "^2.3.5"
   },
-  "license": "MIT",
   "optionalDependencies": {
-    "brace_document_navlink": "^1.1.0",
-    "brace_document_specification": "^1.1.0",
-    "brace_document_link": "^1.1.0"
+    "brace_document": "^1.1.8",
+    "brace_document_link": "^1.1.9",
+    "brace_document_mocha": "^1.1.0",
+    "brace_document_navlink": "^1.1.9",
+    "brace_document_specification": "^1.2.2"
   },
   "scripts": {
     "test": "mocha",
-    "make_docs": "brace_document --navlink --link --link-dest ../Readme.md --link-path synopsis.md -r -i docs --force-title --title \"Brace Matrix help pages\" --sort depth --specification",
-    "make_docs_extra": "npm run make_docs --silent -- --mocha",
-    "build_config": "node ./node_modules/brace_umd/bin/build_umd.js --compress unused,unsafe --mangle toplevel",
-    "build_umd": "r_js -o rjs_build_umd.js",
-    "build_amd": "r_js -o rjs_build.js",
-    "build": "npm run build_config --silent && npm run build_amd --silent && npm run build_umd --silent"
+    "build_config": "node ./node_modules/brace_umd/bin/build_umd.js --config-file uglify_option.json",
+    "build_umd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js suffix=\"_umd\"",
+    "build_amd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js",
+    "build": "npm run build_config && npm run build_umd && npm run build_amd",
+    "make_docs": "brace_document --navlink --link --link-dest ../Readme.md --link-path ../docs/synopsis.md -r -i docs --force-title --title \"Brace Matrix help pages\" --sort depth --specification --mocha"
   },
   "homepage": "https://github.com/restarian/brace_matrix#readme",
   "keywords": [

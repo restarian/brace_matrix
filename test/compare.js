@@ -43,12 +43,14 @@ describe("Using stop further progression methodology for dependencies in: "+path
 	describe("Checking for dependencies..", function() { 
 
 		it("requirejs in the system as a program", function(done) {
+
 			it_will.stop = true 
 			expect((function() {try { require("requirejs"); return true; } catch(e) { return e; }})()).to.be.true 
 			it_will.stop = false 
 			done()
 		})
 		it("the gl-matrix module is installed", function(done) {
+
 			it_will.stop = true 
 			expect((function() {try { require("gl-matrix"); return true; } catch(e) { return e; }})()).to.be.true 
 			it_will.stop = false 
@@ -62,33 +64,42 @@ describe("Using stop further progression methodology for dependencies in: "+path
 		beforeEach(function() {
 			cache.start()
 			requirejs = require("requirejs")
-			requirejs.config({baseUrl: path.join(__dirname, "..", "lib"), nodeRequire: require})
+			requirejs.config({baseUrl: path.join(__dirname, "..", "build"), nodeRequire: require})
 		})
 
 		afterEach(cache.dump.bind(cache))
 
 		it("vec3 comparison", function(done) {
 
-			requirejs(["brace_matrix", "gl-matrix"], function(bglm, glm) { 
+			requirejs(["brace_matrix_umd", "brace_matrix", "gl-matrix"], function(bglm, ubglm, glm) { 
 
 				expect(glm.vec3.create()).to.deep.equal(bglm.vec3.create())
+				expect(glm.vec3.create()).to.deep.equal(ubglm.vec3.create())
 				expect(glm.vec3.fromValues([442,23,48])).to.deep.equal(bglm.vec3.fromValues([442,23,48]))
+				expect(glm.vec3.fromValues([442,23,48])).to.deep.equal(ubglm.vec3.fromValues([442,23,48]))
 				expect(glm.vec3.distance(glm.vec3.create(), [1,4,5], [43,1,33])).to.deep.equal(bglm.vec3.distance(bglm.vec3.create(), [1,4,5], [43,1,33]))
+				expect(glm.vec3.distance(glm.vec3.create(), [1,4,5], [43,1,33])).to.deep.equal(ubglm.vec3.distance(bglm.vec3.create(), [1,4,5], [43,1,33]))
 				done()
 			})
 		})
 		it("mat4 comparison", function(done) {
 
-			requirejs(["brace_matrix", "gl-matrix"], function(bglm, glm) { 
+			requirejs(["brace_matrix_umd", "brace_matrix", "gl-matrix"], function(bglm, ubglm, glm) { 
 
 				expect(glm.mat4.create()).to.deep.equal(bglm.mat4.create())
+				expect(glm.mat4.create()).to.deep.equal(ubglm.mat4.create())
 				expect(glm.mat4.identity(glm.mat4.create())).to.deep.equal(bglm.mat4.create())
+				expect(glm.mat4.identity(glm.mat4.create())).to.deep.equal(ubglm.mat4.create())
 				expect(glm.mat4.identity(glm.mat4.create())).to.deep.equal(bglm.mat4.identity(bglm.mat4.create()))
+				expect(glm.mat4.identity(glm.mat4.create())).to.deep.equal(ubglm.mat4.identity(bglm.mat4.create()))
 
 				var a = glm.mat4.create()
 				var b = bglm.mat4.create()
+				var b = ubglm.mat4.create()
 				expect(glm.mat4.rotate(glm.mat4.create(), a, glm.glMatrix.toRadian(23), [2,1,0])).to.deep.equal(bglm.mat4.rotateVec3(bglm.mat4.create(), b, bglm.toRadian(23), [2,1,0]))
+				expect(glm.mat4.rotate(glm.mat4.create(), a, glm.glMatrix.toRadian(23), [2,1,0])).to.deep.equal(ubglm.mat4.rotateVec3(ubglm.mat4.create(), b, ubglm.toRadian(23), [2,1,0]))
 				expect(glm.mat4.rotate(glm.mat4.create(), a, glm.glMatrix.toRadian(23), [2,1,0])).to.deep.equal(bglm.mat4.rotate(bglm.mat4.create(), b, bglm.toRadian(23), 2,1,0))
+				expect(glm.mat4.rotate(glm.mat4.create(), a, glm.glMatrix.toRadian(23), [2,1,0])).to.deep.equal(ubglm.mat4.rotate(ubglm.mat4.create(), b, bglm.toRadian(23), 2,1,0))
 				done()
 			})
 		})
