@@ -1,78 +1,77 @@
-{ 
-   "name": "brace_matrix", 
-   "main": "build/brace_matrix_umd.js", 
-   "description": "A port of the GlMatix library with reduced functionality and an easy to use design", 
-   "version": "1.0.4", 
-   "license": "MIT", 
-   "dependencies": { 
-   }, 
-   "devDependencies": { 
-      "brace_maybe": "^0.1.5", 
-      "brace_umd": "^0.11.3", 
-      "bracket_utils": "^0.3.7", 
-      "chai": "^4.2.0", 
-      "gl-matrix": "^3.1.0", 
-      "mocha": "^7.0.1", 
+{
+   "name": "brace_matrix",
+   "main": "build/brace_matrix_umd.js",
+   "description": "A port of the GlMatix library with reduced functionality and an easy to use design",
+   "version": "1.0.5",
+   "license": "MIT",
+   "dependencies": {},
+   "devDependencies": {
+      "brace_maybe": "^0.1.5",
+      "brace_umd": "^0.11.3",
+      "bracket_utils": "^0.3.7",
+      "chai": "^4.2.0",
+      "gl-matrix": "^3.1.0",
+      "mocha": "^7.0.1",
       "requirejs": "^2.3.5"
-   }, 
-   "optionalDependencies": { 
-      "brace_document": "^1.1.8", 
-      "brace_document_link": "^1.1.9", 
-      "brace_document_mocha": "^1.1.0", 
-      "brace_document_navlink": "^1.1.9", 
+   },
+   "optionalDependencies": {
+      "brace_document": "^1.1.8",
+      "brace_document_link": "^1.1.9",
+      "brace_document_mocha": "^1.1.0",
+      "brace_document_navlink": "^1.1.9",
       "brace_document_specification": "^1.2.2"
-   }, 
-   "scripts": { 
-      "test": "mocha", 
-      "build_config": "build_umd --config-file uglify_option.json", 
-      "build_umd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js suffix=\"_umd\"", 
-      "build_amd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js", 
-      "build": "npm run build_config && npm run build_umd && npm run build_amd", 
+   },
+   "scripts": {
+      "test": "mocha",
+      "build_config": "build_umd --config-file uglify_option.json",
+      "build_umd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js suffix=\"_umd\"",
+      "build_amd": "r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js",
+      "build": "npm run build_config && npm run build_umd && npm run build_amd",
       "make_docs": "brace_document --navlink --link --link-dest ../Readme.md --link-path ../docs/synopsis.md -r -i docs --force-title --title \"Brace Matrix help pages\" --sort depth --specification --mocha"
-   }, 
-   "homepage": "https://github.com/restarian/brace_matrix#readme", 
+   },
+   "homepage": "https://github.com/restarian/brace_matrix#readme",
    "keywords": [
-      "matrix", 
-      "math", 
-      "vector", 
+      "matrix",
+      "math",
+      "vector",
       "calculus"
-   ], 
-   "author": { 
-      "name": "Robert Steckroth", 
+   ],
+   "author": {
+      "name": "Robert Steckroth",
       "email": "RobertSteckroth@gmail.com"
-   }, 
-   "bugs": { 
+   },
+   "bugs": {
       "url": "https://github.com/restarian/brace_matrix/issues"
-   }, 
-   "bundleDependencies": false, 
-   "repository": { 
-      "type": "git", 
+   },
+   "bundleDependencies": false,
+   "repository": {
+      "type": "git",
       "url": "git+https://github.com/restarian/brace_matrix.git"
-   }, 
+   },
    "technologies": [
-      { 
-         "name": "VIM", 
-         "description": "As an IDE", 
+      {
+         "name": "VIM",
+         "description": "As an IDE",
          "url": "https://www.vim.org"
-      }, 
-      { 
-         "name": "Windows 10", 
-         "description": "For unit testing and as the base operating system", 
+      },
+      {
+         "name": "Windows 10",
+         "description": "For unit testing and as the base operating system",
          "url": "https://www.microsoft.com/en-us/software-download/windows10"
-      }, 
-      { 
-         "name": "Git", 
-         "description": "For repository management", 
+      },
+      {
+         "name": "Git",
+         "description": "For repository management",
          "url": "https://git-scm.com"
-      }, 
-      { 
-         "name": "Github", 
-         "description": "For repository storage", 
+      },
+      {
+         "name": "Github",
+         "description": "For repository storage",
          "url": "https://github.com"
-      }, 
-      { 
-         "name": "NPM", 
-         "description": "For module storage", 
+      },
+      {
+         "name": "NPM",
+         "description": "For module storage",
          "url": "https://npmjs.org"
       }
    ]
