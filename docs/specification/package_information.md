@@ -11,7 +11,7 @@
   * [Unit test output](https://github.com/restarian/brace_matrix/blob/master/docs/specification/unit_test_output.md)
 ----
 
-**Version**: 1.0.3
+**Version**: 1.0.4
 
 **Description**: A port of the GlMatix library with reduced functionality and an easy to use design
 
@@ -26,7 +26,7 @@
 | Name | Action |
 | ---- | ------ |
  | test | ```mocha``` |
- | build_config | ```node ./node_modules/brace_umd/bin/build_umd.js --config-file uglify_option.json``` |
+ | build_config | ```build_umd --config-file uglify_option.json``` |
  | build_umd | ```r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js suffix="_umd"``` |
  | build_amd | ```r_js -o ./rjs_build_first.js && r_js -o ./rjs_build_second.js``` |
  | build | ```npm run build_config && npm run build_umd && npm run build_amd``` |
